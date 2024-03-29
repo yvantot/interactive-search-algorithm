@@ -152,7 +152,7 @@ async function autoFunc(mode) {
     }
     /* Update time */
     timeEnd = performance.now();
-    timeResult.textContent = 'Time took: ' + (timeEnd - timeStart) / 1000 + 's';
+    timeResult.textContent = 'Time took: ' + ((timeEnd - timeStart) / 1000).toFixed(3) + 's';
   }
 }
 
@@ -168,7 +168,7 @@ function linearSearch() {
       tryFind = false;
     }
 
-    indexCurrent.textContent = 'Current index : ' + itemIndex;
+    indexCurrent.textContent = 'Current index : ' + itemIndex + ' Jump length: 1';
     itemIndex += 1;
     itemIndex = itemIndex % array.length;
   }
@@ -213,7 +213,7 @@ function randomSearch() {
     } else {
       notFound(getItem, isFound);
     }
-    indexCurrent.textContent = 'Current index : ' + itemIndex;
+    indexCurrent.textContent = 'Current index : ' + itemIndex + ' Jump length: Random';
   }
 }
 
