@@ -236,6 +236,9 @@ function binarySearch() {
   middleItem.classList.add('jello-horizontal');
   setTimeout(() => middleItem.classList.remove('jello-horizontal'), 900);
 
+  isFound.style.background = 'red';
+  isFound.textContent = 'NOT HERE, BUT KEEP GOING!';
+
   console.log(left, itemIndex, right);
 
   indexCurrent.textContent = 'Left : ' + left + ' Middle: ' + itemIndex + ' Right: ' + right;
