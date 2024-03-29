@@ -223,18 +223,18 @@ function binarySearch() {
   const leftItem = document.getElementById(`arrItem${left}`);
   leftItem.style.backgroundColor = 'orange';
   leftItem.classList.add('jello-horizontal');
-  setTimeout(() => leftItem.classList.remove('jello-horizontal'), 2000);
+  setTimeout(() => leftItem.classList.remove('jello-horizontal'), 900);
 
   const rightItem = document.getElementById(`arrItem${right}`);
   rightItem.style.backgroundColor = 'orange';
   rightItem.classList.add('jello-horizontal');
-  setTimeout(() => rightItem.classList.remove('jello-horizontal'), 2000);
+  setTimeout(() => rightItem.classList.remove('jello-horizontal'), 900);
 
   itemIndex = Math.floor((left + right) / 2);
   const middleItem = document.getElementById(`arrItem${itemIndex}`);
   middleItem.style.backgroundColor = 'red';
   middleItem.classList.add('jello-horizontal');
-  setTimeout(() => middleItem.classList.remove('jello-horizontal'), 2000);
+  setTimeout(() => middleItem.classList.remove('jello-horizontal'), 900);
 
   console.log(left, itemIndex, right);
 
