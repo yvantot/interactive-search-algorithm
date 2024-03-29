@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Searching Algorithms</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body id="body">
+    <main class="min-w min-h-screen bg-neutral-900 text-white text-center p-7">
+      <h1 class="text-3xl font-bold sm:text-4xl md:text-5xl sm:w-full md:w-[80%] lg:w-[60%] mx-auto">Interactive Guide for Different Searching Algorithms</h1>
+      <p class="text-xs text-center text-neutral-500 mt-2 md:text-sm">Input a number and press forward to move the index</p>
+      <!-- Input -->
+      <div id="modeButton" class="text-start my-5 mb-2 md:text-center">
+        <button class="bg-red-600 px-3 rounded font-bold tracking-tight focus:bg-red-700 hover:bg-red-500 my-1" id="resetAll">Reset</button>
+        <button class="bg-gray-600 px-3 rounded font-bold tracking-tight focus:bg-gray-700 hover:bg-gray-500 my-1" id="changeArray">Change</button>
+        <input class="rounded text-base w-1/6 px-2 pr-0 text-black m-1y" type="number" placeholder="Please input a number!" value="100" id="numToFound" />
+        <button class="bg-blue-600 px-3 rounded font-bold tracking-tight focus:bg-blue-700 hover:bg-blue-500 my-1" id="incrIndex">Forward</button>
+        <button class="bg-yellow-600 px-3 rounded font-bold tracking-tight focus:bg-yellow-700 hover:bg-yellow-500 my-1" id="autoButton">Auto</button>
+      </div>
+
+      <!-- Searching mode -->
+      <div class="flex justify-start md:justify-center gap-2 text-neutral-500">
+        <div>
+          <input class="w-2 checked:w-5" type="radio" name="mode" id="linear" />
+          <label for="linear">Linear</label>
+        </div>
+
+        <div>
+          <input class="w-2 checked:w-5" type="radio" name="mode" id="binary" />
+          <label for="binary">Binary</label>
+        </div>
+
+        <div>
+          <input class="w-2 checked:w-5" type="radio" name="mode" id="multiple" />
+          <label for="multiple">Multiple</label>
+        </div>
+
+        <div>
+          <input class="w-2 checked:w-5" type="radio" name="mode" id="random" />
+          <label for="random">Random</label>
+        </div>
+
+        <style>
+          label {
+            font-size: smaller;
+            cursor: pointer;
+          }
+        </style>
+      </div>
+      <p id="algoInfo" class="my-7 mt-0 inline-block text-xs sm:text-sm md:text-base font-mono text-neutral-400 lg:w-1/2">Select a mode.</p>
+      <p id="timeResult" class="tracking-wider font-mono font-light">Time took: 0.00s</p>
+      <div id="isFound" class="md:mx-auto md:w-1/2 bg-blue-500 p-3 py-1 text-lg font-bold tracking-tight rounded mb-2 font-mono">"Algorithm is the heart of machine."</div>
+      <div class="text-start text-2xl font-light p-2 bg-neutral-700 rounded md:w-1/2 md:mx-auto flex gap-1 justify-center flex-wrap" id="arrayList">
+        <!-- Give them fixed size -->
+      </div>
+
+      <div class="mt-3 text-start leading-relaxed text-neutral-400 md:text-center">
+        <h2 class="text-3xl font-normal tracking-wider">Details</h2>
+        <p id="indexCurrent">Current index : #</p>
+      </div>
+      <p class="text-sm inline-block mt-7 opacity-40">
+        Made with ❤ by <a href="facebook.com"><em>@Jun Ivanne Dalman</em></a>
+      </p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
